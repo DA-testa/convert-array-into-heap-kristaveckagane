@@ -30,7 +30,8 @@ def main():
     if "f" == ievade.lower():
         file = input("").strip()
         try:
-         with open(file, "r") as f:
+         path = os.path.abspath(file)
+         with open(path, "r") as f:
            n = int(f.readline().strip())
            data = list(map(int, f.readline().split()))
            swaps = build_heap(data)
