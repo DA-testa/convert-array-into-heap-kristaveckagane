@@ -26,14 +26,13 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    ievade = input("").strip()
+    ievade = input().strip()
     if "f" == ievade.lower():
         file = input("").strip()
         try:
          with open(file, "r") as f:
            n = int(f.readline().strip())
-           numbers = f.readline.strip().split()
-           data = [int(x) for x in numbers]
+           data = list(map(int, f.readline().split()))
            swaps = build_heap(data)
            print(len(swaps))
            for i, j in swaps:
