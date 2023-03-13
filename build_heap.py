@@ -6,11 +6,11 @@ def build_heap(data):
         while True:
           leftchild = 2*i+1
           rightchild = 2*i+2
-          if leftchild < n and data[leftchild] < data[i]
+          if leftchild < n and data[leftchild] < data[i]:
            mazaks = leftchild
           else:
             mazaks = i
-          if rightchild < n and data[rightchild] < data[i]
+          if rightchild < n and data[rightchild] < data[i]:
            mazaks = rightchild
           if mazaks == i:
             break
