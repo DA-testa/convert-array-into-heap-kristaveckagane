@@ -28,17 +28,17 @@ def main():
     # first two tests are from keyboard, third test is from a file
     ievade = input("").strip()
     if "f" == ievade.lower():
-        file = input("")
+        file = input("").strip()
         try:
-          file = open("./test/" + file, mode="r")
-          read = f.readlines()
-          n = int(read[0])
-          numbers = read[1].split()
-          data = [int(x) for x in numbers]
-          swaps = build_heap(data)
-          print(len(swaps))
-          for i, j in swaps:
-           print(i, j)
+         with open(file, "r") as f:
+           read = f.readlines()
+           n = int(read[0])
+           numbers = read[1].split()
+           data = [int(x) for x in numbers]
+           swaps = build_heap(data)
+           print(len(swaps))
+           for i, j in swaps:
+            print(i, j)
         except OSError as e:
             print(e)
     if "i" == ievade.lower():
