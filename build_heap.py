@@ -11,11 +11,11 @@ def build_heap(data):
           else:
             mazaks = i
           if rightchild < len(data) and data[rightchild] < data[i]:
-           mazaks = rightchild
+            mazaks = rightchild
           if mazaks == i:
             break
           swaps.append((i,mazaks))
-          data[i], data[mazaks] == data[mazaks], data[i]
+          data[i], data[mazaks] = data[mazaks], data[i]
           i = mazaks
 
     return swaps
@@ -30,8 +30,8 @@ def main():
     if "f" == ievade.lower():
         file = input("").strip()
         try:
-         file = open("./test/" + file, mode="r")
-         read = file.readlines()
+         with open(file, "r") as f:
+         read = f.readlines()
          n = int(read[0])
          numbers = read[1].split()
          data = [int(x) for x in numbers]
