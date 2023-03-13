@@ -31,14 +31,14 @@ def main():
         file = input("").strip()
         try:
          with open(file, "r") as f:
-         read = f.readlines()
-         n = int(read[0])
-         numbers = read[1].split()
-         data = [int(x) for x in numbers]
-         swaps = build_heap(data)
-         print(len(swaps))
-         for i, j in swaps:
-          print(i, j)
+          read = f.readlines()
+          n = int(read[0])
+          numbers = read[1].split()
+          data = [int(x) for x in numbers]
+          swaps = build_heap(data)
+          print(len(swaps))
+          for i, j in swaps:
+           print(i, j)
         except OSError as e:
             print(e)
     if "i" == ievade.lower():
