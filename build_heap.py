@@ -10,7 +10,7 @@ def build_heap(data):
            mazaks = leftchild
           else:
             mazaks = i
-          if rightchild < len(data) and data[rightchild] < data[i]:
+          if rightchild < len(data) and data[rightchild] < data[mazaks]:
             mazaks = rightchild
           if mazaks == i:
             break
@@ -28,7 +28,7 @@ def main():
     # first two tests are from keyboard, third test is from a file
     ievade = input("").strip()
     if "f" == ievade.lower():
-        file = input("").strip()
+        file = input("")
         try:
          with open(file, "r") as f:
           read = f.readlines()
