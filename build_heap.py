@@ -28,9 +28,9 @@ def main():
     # first two tests are from keyboard, third test is from a file
     ievade = input().strip()
     if "f" == ievade.lower():
-        file = input().strip()
+        file = input("").strip()
         try:
-         with open(file, "r") as f:
+         file = open("./test/" + file, mode="r")
            n = int(f.readline().strip())
            data = list(map(int, f.readline().split()))
            swaps = build_heap(data)
