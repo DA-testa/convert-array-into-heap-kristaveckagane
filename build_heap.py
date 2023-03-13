@@ -29,18 +29,17 @@ def main():
     ievade = input("").strip()
     if "f" == ievade.lower():
         file = input("").strip()
-        #try:
+        try:
          with open(file, "r") as f:
-           read = f.readlines()
-           n = int(read[0])
-           numbers = read[1].split()
+           n = int(f.readline().strip())
+           numbers = readline.strip().split()
            data = [int(x) for x in numbers]
            swaps = build_heap(data)
            print(len(swaps))
            for i, j in swaps:
             print(i, j)
-        #except OSError as e:
-            #print(e)
+        except OSError as e:
+            print(e)
     if "i" == ievade.lower():
     # input from keyboard
      n = int(input())
