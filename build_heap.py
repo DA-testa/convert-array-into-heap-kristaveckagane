@@ -30,9 +30,10 @@ def main():
     if "f" == ievade.lower():
         file = input("").strip()
         try:
-         file = open("./test/" + file, mode="r")
-           n = int(f.readline().strip())
-           data = list(map(int, f.readline().split()))
+           file = open("./test/" + file, mode="r")
+           rindas=file.readlines()
+           n = int(lines[0])
+           data = list(map(int, lines[1].split()))
            swaps = build_heap(data)
            print(len(swaps))
            for i, j in swaps:
