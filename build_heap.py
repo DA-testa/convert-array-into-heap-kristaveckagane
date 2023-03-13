@@ -30,7 +30,7 @@ def main():
     if "f" == ievade.lower():
         file = input("").strip()
         try:
-           file = open("./test/" + file, mode="r")
+           file = open("folder/" + file, mode="r")
            rindas=file.readlines()
            n = int(lines[0])
            data = list(map(int, lines[1].split()))
