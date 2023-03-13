@@ -30,7 +30,7 @@ def main():
     if "f" == ievade.lower():
         file = input("")
         try:
-         with open(file, "r") as f:
+         file = open("./test/" + file, mode="r")
           read = f.readlines()
           n = int(read[0])
           numbers = read[1].split()
