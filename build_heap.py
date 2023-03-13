@@ -28,7 +28,7 @@ def main():
     # first two tests are from keyboard, third test is from a file
     ievade = input().strip()
     if "f" == ievade.lower():
-        file = input("").strip()
+        file = input().strip()
         try:
          with open(file, "r") as f:
            n = int(f.readline().strip())
