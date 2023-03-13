@@ -1,6 +1,6 @@
 # python3
 
-
+def build_heap(data):
     swaps = []
     for i in range(n // 2, -1, -1):
         while True:
