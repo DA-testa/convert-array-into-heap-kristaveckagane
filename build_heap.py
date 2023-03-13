@@ -39,6 +39,8 @@ def main():
          print(len(swaps))
          for i, j in swaps:
           print(i, j)
+        except OSError as e:
+            print(e)
     if "i" == ievade.lower():
     # input from keyboard
      n = int(input())
