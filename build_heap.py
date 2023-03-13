@@ -32,7 +32,7 @@ def main():
         try:
          with open(file, "r") as f:
            n = int(f.readline().strip())
-           numbers = readline.strip().split()
+           numbers = f.readline.strip().split()
            data = [int(x) for x in numbers]
            swaps = build_heap(data)
            print(len(swaps))
