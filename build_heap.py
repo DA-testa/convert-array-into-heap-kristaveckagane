@@ -2,15 +2,15 @@
 
 def build_heap(data):
     swaps = []
-    for i in range(n // 2, -1, -1):
+    for i in range(len(data) // 2, -1, -1):
         while True:
           leftchild = 2*i+1
           rightchild = 2*i+2
-          if leftchild < n and data[leftchild] < data[i]:
+          if leftchild < len(data) and data[leftchild] < data[i]:
            mazaks = leftchild
           else:
             mazaks = i
-          if rightchild < n and data[rightchild] < data[i]:
+          if rightchild < len(data) and data[rightchild] < data[i]:
            mazaks = rightchild
           if mazaks == i:
             break
@@ -29,13 +29,15 @@ def main():
     ievade = input("").strip()
     if "f" == ievade.lower():
         file = input("").strip()
-        read = file.readlines()
-        n = int(read[0])
-        numbers = read[1].split()
-        data = [int(x) for x in numbers]
-        swaps = build_heap(data)
-        print(len(swaps))
-        for i, j in swaps:
+        try:
+         file = open("./test/" + file, mode="r")
+         read = file.readlines()
+         n = int(read[0])
+         numbers = read[1].split()
+         data = [int(x) for x in numbers]
+         swaps = build_heap(data)
+         print(len(swaps))
+         for i, j in swaps:
           print(i, j)
     if "i" == ievade.lower():
     # input from keyboard
