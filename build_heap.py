@@ -30,7 +30,7 @@ def main():
     if "f" == ievade.lower():
         file = input("").strip()
         try:
-           file = open("./test/" + file, mode="r")
+           file = open("./tests/" + file, mode="r")
            n = int(f.readline().strip())
            data = list(map(int, f.readline().split()))
            assert len(data) == n
